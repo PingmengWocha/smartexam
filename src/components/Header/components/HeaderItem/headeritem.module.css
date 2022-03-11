@@ -1,0 +1,34 @@
+.dropdownicon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.page_top {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.dropdown {
+    cursor: pointer;
+    color: #555;
+    margin-left: 11px;
+    margin-right: 9px;
+    padding: 8px 15px 4px;
+}
+
+
+/* 设置下拉内容样式 */
+.menuitem {
+    color: #555 !important;
+    font-size: 14px !important;
+    padding: 8px 40px 8px 22px !important;
+}
+
+.tabpane {
+    height: 40px;
+
+}
