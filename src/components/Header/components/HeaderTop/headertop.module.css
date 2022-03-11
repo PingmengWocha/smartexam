@@ -1,0 +1,149 @@
+/* 数据分析icon */
+.shujufenxiyi {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 返回icon */
+.iconback {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 输入框icon */
+.iconwrite {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 分享icon */
+.iconshare {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 共享icon */
+.iconallshare {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.site_page_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    border-bottom: 1px solid hsla(0, 0%, 87%, .522);
+    padding: 0 15px;
+    position: relative;
+}
+
+.page_header_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.back {
+    font-size: 24px;
+    margin-left: 9px;
+    margin-right: 24px;
+}
+
+.datacheck {
+    font-size: 44px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 16px;
+}
+
+.page_header_main {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.page_header_main_input {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    min-width: 200px;
+}
+
+.page_header_main_input .showinput {
+    display: none;
+    color: #555;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.edit .middle_input {
+    display: none;
+}
+
+.edit .writeicon {
+    display: none;
+}
+
+.edit .showinput {
+    display: inline-block;
+    width: 340px;
+}
+
+
+.page_header_main_input:hover {
+    border-bottom: 1px solid blue !important;
+}
+
+.middle_input {
+    color: #555;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.writeicon {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+
+.page_header_right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn {
+    font-weight: 700;
+    margin-left: 40px;
+}
+
+.savebtn {
+    width: 76px !important;
+    height: 32px !important;
+}
