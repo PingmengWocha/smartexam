@@ -114,9 +114,11 @@
 }
 
 
-.page_header_main_input:hover {
+.page_header_main_input:hover,
+.edit {
     border-bottom: 1px solid blue !important;
 }
+
 
 .middle_input {
     color: #555;
@@ -139,7 +141,7 @@
 }
 
 .btn {
-    font-weight: 700;
+    font-weight: 700 !important;
     margin-left: 40px;
 }
 
