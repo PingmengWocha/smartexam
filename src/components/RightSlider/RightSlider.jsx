@@ -1,4 +1,5 @@
 import { Collapse } from 'antd'
+import { DownOutlined, UpOutlined } from '@ant-design/icons'
 import React, { Component } from 'react'
 
 import rightslider from './rightslider.module.css'
@@ -24,6 +25,7 @@ export default class RightSlider extends Component {
                             <Collapse
                                 bordered={false}
                                 expandIconPosition='right'
+                                expandIcon={this.handleCollChange}
                                 defaultActiveKey='1'>
                                 <Panel header="功能设置" key={"1"}>
                                     1
@@ -42,5 +44,15 @@ export default class RightSlider extends Component {
         if (currentIndex === type) return
         currentIndex = type;
         this.setState({ currentIndex });
+    }
+
+    // 自定义Collapse图标
+    handleCollChange = (props) => {
+        let { isActive } = props;
+        if (isActive) {
+            return <DownOutlined className={rightslider.collicon}/>
+        } else {
+            return <UpOutlined className={rightslider.collicon}/>
+        }
     }
 }
