@@ -1,0 +1,7 @@
+.main_content {
+    height: calc(100vh - 192px);
+    /* background: aquamarine; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

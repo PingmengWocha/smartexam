@@ -1,0 +1,45 @@
+.slider {
+    width: 360px;
+    background: #f5f5f9;
+    font-size: 14px;
+}
+
+.bottom {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(94, 96, 95);
+    height: 44px;
+}
+
+.half {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 44px;
+    text-align: center;
+    border-top: 1px solid rgb(222, 223, 224);
+}
+
+.half.active {
+    color: rgb(81, 130, 228);
+    position: relative;
+    top: -1px;
+    border-top: 3px solid rgb(81, 130, 228);
+}
+
+
+/* 分隔符 */
+.seperator {
+    height: 20px;
+    width: 1px;
+    background: rgb(171, 174, 179);
+}
