@@ -23,6 +23,7 @@ export default class RightSlider extends Component {
                     <div className={rightslider.rigth_content}>
                         <div>
                             <Collapse
+                                className={rightslider.property_block}
                                 bordered={false}
                                 expandIconPosition='right'
                                 expandIcon={this.handleCollChange}
@@ -50,9 +51,9 @@ export default class RightSlider extends Component {
     handleCollChange = (props) => {
         let { isActive } = props;
         if (isActive) {
-            return <DownOutlined className={rightslider.collicon}/>
+            return <DownOutlined className={rightslider.collicon} />
         } else {
-            return <UpOutlined className={rightslider.collicon}/>
+            return <UpOutlined className={rightslider.collicon} />
         }
     }
 }

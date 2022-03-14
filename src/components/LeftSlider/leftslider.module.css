@@ -73,9 +73,8 @@
 /* 左边内容 */
 .left_content {
     width: 208px;
-    border-right: 1px solid rgb(21, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
     padding: 0px 16px;
-    /* background: pink; */
     height: 100%;
 }
 
@@ -334,6 +333,3 @@
 .left_way {
     margin-left: 4px;
 }
-
-
-
