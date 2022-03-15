@@ -1,3 +1,32 @@
+/* 占位icon */
+.iconarea {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.icons {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.normal_icon {
+    margin-right: 10px;
+}
+
+.all_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.hide_node {
+    display: none;
+}
+
+
 .collicon {
     font-size: 14px;
     margin-left: 5px;
@@ -50,14 +79,118 @@
     background: rgb(171, 174, 179);
 }
 
-/* 功能设置 */
-.property_block {
-    border-bottom: 1px solid hsl(210deg, 3%, 87%);
-    padding: 10px 20px 10px 15px;
-    border-top: 0px;
+
+.rigth_content {
+    height: calc(100% - 44px);
+    overflow: auto;
 }
 
-/* 样式穿透 */
+.rigth_content::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.rigth_content::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #ececec;
+}
+
+.rigth_content::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #b5b5b5;
+}
+
+/* 样式穿透修改折叠面板header默认padding和添加margin */
 :global(.ant-collapse-header) {
     padding: 0 !important;
+    margin: 10px 0;
+    color: #5e605f !important;
+}
+
+:global(.ant-collapse-item) {
+    border-bottom: 0px !important;
+}
+
+:global(.ant-collapse-arrow) {
+    right: 0px !important;
+}
+
+/* 功能设置 样式穿透修改 */
+:global(.ant-collapse) {
+    border-bottom: 1px solid hsl(210deg, 3%, 87%) !important;
+    padding: 10px 20px 10px 15px !important;
+    border-top: 0px !important;
+}
+
+:global(.ant-collapse-content-box) {
+    padding: 0px !important;
+}
+
+
+.form_screen {
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.form_setting_title {
+    line-height: 40px;
+    color: #5e605f;
+}
+
+.form_setting_btn {
+    text-align: right;
+    line-height: 40px;
+    cursor: pointer;
+    color: #5182e4;
+}
+
+.form_checkbox {
+    line-height: 40px;
+    position: relative;
+}
+
+/* 对齐表单 */
+.aligns {
+    padding: 10px 20px;
+}
+
+.property_label {
+    color: #5e605f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* 对齐按钮样式 */
+.ql_align {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    margin-right: 10px;
+    outline: none;
+    padding: 3px 10px 3px 0;
+    width: 28px;
+}
+
+.ql_active {
+    color: #0454f2;
+}
+
+.fontfy {
+    color: #5e605f;
+}
+
+/* tab的row总体样式 */
+.tab_row {
+    line-height: 40px;
+    color: #5e605f;
+}
+.rule_btn {
+    width: 100%;
+    color: rgb(94, 96, 95);
+    background-color: rgb(246, 247, 248);
+    border-color: rgb(222, 223, 224);
 }

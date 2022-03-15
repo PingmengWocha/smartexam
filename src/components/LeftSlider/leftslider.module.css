@@ -1,63 +1,15 @@
 .normal_icon {
     margin-right: 10px;
-    vertical-align: 0px;
 }
-
-.iconname {
+.icons {
     width: 1em;
     height: 1em;
-    vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
 }
 
-/* 搜索图标 */
-.iconsearch {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
+.serach_span {
     color: #dedfe0;
-}
-
-.icondx {
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-.iconcolor {
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-.icontext {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-/* 柱状图icon */
-.iconzzt {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-.iconright {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
 }
 
 /* 整体 */
@@ -98,7 +50,6 @@
 
 .asset_dataset {
     cursor: pointer;
-    vertical-align: -0.125em;
 }
 
 .asset_dataset:hover {
@@ -332,4 +283,9 @@
 
 .left_way {
     margin-left: 4px;
+}
+
+/* 除去气泡框默认padding */
+:global(.ant-popover-inner-content) {
+    padding: 0px !important;
 }

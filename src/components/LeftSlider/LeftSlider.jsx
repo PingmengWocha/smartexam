@@ -110,7 +110,7 @@ const menu = (
                     style={{ padding: 0 }}
                 >
                     <span className={leftslider.right_icon}>
-                        <svg className={leftslider.iconright} aria-hidden="true">
+                        <svg className={leftslider.icons} aria-hidden="true">
                             <use xlinkHref="#icon-youjiantou"></use>
                         </svg>
                     </span>
@@ -126,7 +126,7 @@ const menu = (
                     style={{ padding: 0 }}
                 >
                     <span className={leftslider.right_icon}>
-                        <svg className={leftslider.iconright} aria-hidden="true">
+                        <svg className={leftslider.icons} aria-hidden="true">
                             <use xlinkHref="#icon-youjiantou"></use>
                         </svg>
                     </span>
@@ -145,7 +145,7 @@ const menu = (
                     style={{ padding: 0 }}
                 >
                     <span className={leftslider.right_icon}>
-                        <svg className={leftslider.iconright} aria-hidden="true">
+                        <svg className={leftslider.icons} aria-hidden="true">
                             <use xlinkHref="#icon-youjiantou"></use>
                         </svg>
                     </span>
@@ -169,8 +169,8 @@ export default class LeftSlider extends Component {
     render() {
         let { getFocus } = this.state
         let prefix = (
-            <span className='all_icon'>
-                <svg className={leftslider.iconsearch} aria-hidden="true">
+            <span className={`${leftslider.serach_span} all_icon`}>
+                <svg className={leftslider.icons} aria-hidden="true">
                     <use xlinkHref="#icon-sousuo"></use>
                 </svg>
             </span>
@@ -182,7 +182,7 @@ export default class LeftSlider extends Component {
                     <div className={leftslider.columns}>
                         <h3 className={leftslider.asset_name}>
                             <span className='all_icon' style={{ marginRight: "10px" }}>
-                                <svg className={leftslider.iconname} aria-hidden="true">
+                                <svg className={leftslider.icons} aria-hidden="true">
                                     <use xlinkHref='#icon-odbc'></use>
                                 </svg>
                             </span>
@@ -211,7 +211,7 @@ export default class LeftSlider extends Component {
                                                 <div className={leftslider.column_row}>
                                                     <div style={{ display: 'flex' }}>
                                                         <span className={`${leftslider.order_type} all_icon`}>
-                                                            <svg className={leftslider.icontext} aria-hidden="true">
+                                                            <svg className={leftslider.icons} aria-hidden="true">
                                                                 <use xlinkHref="#icon-text"></use>
                                                             </svg>
                                                         </span>
@@ -224,7 +224,7 @@ export default class LeftSlider extends Component {
                                                             placement="bottomLeft"
                                                         >
                                                             <span className={`${leftslider.lost_icon} ${item.selected ? '' : leftslider.lost_icon_none}`}>
-                                                                <svg className={leftslider.iconzzt} aria-hidden="true">
+                                                                <svg className={leftslider.icons} aria-hidden="true">
                                                                     <use xlinkHref="#icon-zhuzhuangtu"></use>
                                                                 </svg>
                                                             </span>
@@ -243,7 +243,7 @@ export default class LeftSlider extends Component {
                     <div className={leftslider.addcolumns}>
                         <div className={leftslider.addbtn}>
                             <span className={`all_icon ${leftslider.normal_icon}`}>
-                                <svg className={leftslider.iconright} aria-hidden="true">
+                                <svg className={leftslider.icons} aria-hidden="true">
                                     <use xlinkHref="#icon-jiahao1"></use>
                                 </svg>
                             </span>
@@ -259,7 +259,7 @@ export default class LeftSlider extends Component {
                             <div className={leftslider.point_area}>
                                 <p className={leftslider.right_way}>
                                     <span className={`all_icon ${leftslider.normal_icon} ${leftslider.point_icon}`}>
-                                        <svg className={leftslider.iconcolor} aria-hidden="true">
+                                        <svg className={leftslider.icons} aria-hidden="true">
                                             <use xlinkHref="#icon-yanse"></use>
                                         </svg>
                                     </span>
@@ -269,7 +269,7 @@ export default class LeftSlider extends Component {
                             <div className={leftslider.point_area}>
                                 <p className={leftslider.left_way}>
                                     <span className={`all_icon ${leftslider.normal_icon} ${leftslider.point_icon}`}>
-                                        <svg className={leftslider.icondx} aria-hidden="true">
+                                        <svg className={leftslider.icons} aria-hidden="true">
                                             <use xlinkHref="#icon-daxiao"></use>
                                         </svg>
                                     </span>
@@ -281,7 +281,7 @@ export default class LeftSlider extends Component {
                             <div className={leftslider.point_area}>
                                 <p>
                                     <span className={`all_icon ${leftslider.normal_icon} ${leftslider.point_icon}`}>
-                                        <svg className={leftslider.icondx} aria-hidden="true">
+                                        <svg className={leftslider.icons} aria-hidden="true">
                                             <use xlinkHref="#icon-biaoqian"></use>
                                         </svg>
                                     </span>

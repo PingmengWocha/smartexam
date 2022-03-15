@@ -1,0 +1,11 @@
+.all_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.normal_icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    overflow: hidden;
+}

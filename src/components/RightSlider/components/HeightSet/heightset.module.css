@@ -1,0 +1,30 @@
+.property_block {
+    border-bottom: 1px solid #dedfe0;
+    padding: 10px 20px 10px 15px;
+}
+
+.form_item {
+    padding: 6px 0;
+}
+
+.form_col {
+    line-height: 40px;
+    position: relative;
+}
+
+.form_col_inline {
+}
+
+.line_classes {
+    box-shadow: inset 0 -1px 0 0 #a8c0f1;
+    display: inline-block;
+    margin-left: 5px;
+    overflow: hidden;
+    width: 96px;
+    line-height: 32px;
+}
+
+.menu_img {
+    height: 2px;
+    width: 72px;
+}
