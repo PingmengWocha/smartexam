@@ -12,8 +12,6 @@
     position: relative;
 }
 
-.form_col_inline {
-}
 
 .line_classes {
     box-shadow: inset 0 -1px 0 0 #a8c0f1;
@@ -27,4 +25,39 @@
 .menu_img {
     height: 2px;
     width: 72px;
+}
+
+.menu_img img {
+    height: 2px;
+    width: 72px;
+}
+
+.select_line {
+    display: inline-block;
+    margin-left: 2px;
+    position: relative;
+    top: -11px;
+    width: 66px;
+}
+
+.input_color_out {
+    border: 1px solid hsl(217deg, 5%, 69%);
+    cursor: pointer;
+    height: 16px;
+    left: 7px;
+    line-height: 10px;
+    margin-left: 6px;
+    position: relative;
+    top: -5px;
+    width: 16px;
+    display: inline-block;
+}
+
+.input_color {
+    height: 12px;
+    width: 12px;
+    margin: 1px;
+    padding: 0px;
+    background-color: hsl(0deg, 0%, 91%);
+    border: 0px;
 }

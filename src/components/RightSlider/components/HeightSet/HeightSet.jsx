@@ -1,4 +1,4 @@
-import { Checkbox, Col, Collapse, Dropdown, Form, Row, Menu } from 'antd'
+import { Checkbox, Col, Collapse, Dropdown, Form, Row, Menu, Select, Input } from 'antd'
 import React, { Component } from 'react'
 import MyForm from '../../../MyForm/MyForm'
 import Icon from '../../../Icon/Icon'
@@ -6,6 +6,7 @@ import { DownOutlined, UpOutlined } from '@ant-design/icons'
 import heightset from './heightset.module.css'
 
 const { Panel } = Collapse;
+const { Option } = Select;
 const layout = {
     labelCol: {
         span: 8
@@ -86,6 +87,8 @@ let menu = (
     </Menu>
 )
 
+let pxdata = ['0px', '1px', '2px', '3px', '4px', '5px', '6px'];
+
 export default class HeightSet extends Component {
     render() {
         return (
@@ -106,14 +109,25 @@ export default class HeightSet extends Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col className={`${heightset.form_col} ${heightset.form_col_inline}`}>
-                                            <Icon icontext='zhanweifu'></Icon>
-                                            <Dropdown overlay={menu} className={heightset.line_classes}>
-                                                <div className={heightset.menu_img}>
-                                                    1
-                                                    {/* <img alt='' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAAACAQMAAABxFrtQAAAAA1BMVEWzs7P94mLeAAAAC0lEQVQI12OgCgAAAEYAAQPkj3AAAAAASUVORK5CYII=' /> */}
+                                        <Col span={24} className={`${heightset.form_col} ${heightset.form_col_inline}`}>
+                                            <Icon style={{ width: '20px', height: '20px' }} icontext='zhanweifu'></Icon>
+                                            <Dropdown placement="bottomLeft" overlay={menu} className={heightset.line_classes}>
+                                                <div>
+                                                    <span className={heightset.menu_img}>
+                                                        <img alt='' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAAACAQMAAABxFrtQAAAAA1BMVEWzs7P94mLeAAAAC0lEQVQI12OgCgAAAEYAAQPkj3AAAAAASUVORK5CYII=' />
+                                                    </span>
+                                                    <DownOutlined style={{ width: '10px', height: '10px', color: '#5e605f' }} />
                                                 </div>
                                             </Dropdown>
+                                            <Icon style={{ width: '20px', height: '20px' }} icontext='zhanweifu'></Icon>
+                                            <Select className={heightset.select_line} defaultValue='0px'>
+                                                {pxdata.map(item => (
+                                                    <Option value={item}>{item}</Option>
+                                                ))}
+                                            </Select>
+                                            <div className={heightset.input_color_out}>
+                                                <input className={heightset.input_color} type='color' />
+                                            </div>
                                         </Col>
                                     </Row>
                                 </div>
