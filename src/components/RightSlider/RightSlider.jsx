@@ -50,8 +50,8 @@ export default class RightSlider extends Component {
                         <div className={rightslider.seperator}></div>
                         <div className={`${rightslider.half} ${currentIndex === '1' ? rightslider.active : ''}`} data-type='1'>高级配置</div>
                     </div>
-                    {/* 基本设置 */}
                     <div className={`${rightslider.rigth_content} ${currentIndex === '0' ? '' : rightslider.hide_node}`}>
+                        {/* 基本设置 */}
                         <div>
                             <Collapse
                                 className={rightslider.panel_label}
@@ -59,7 +59,7 @@ export default class RightSlider extends Component {
                                 expandIconPosition='right'
                                 expandIcon={this.handleCollChange}
                                 defaultActiveKey='1'>
-                                <Panel header="功能设置" key={"1"}>
+                                <Panel header="功能设置" key={"1"} style={{ color: '#f5f5f9' }}>
                                     {setPanel}
                                 </Panel>
                             </Collapse>

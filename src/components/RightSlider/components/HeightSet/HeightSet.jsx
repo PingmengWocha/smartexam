@@ -1,7 +1,7 @@
-import { Checkbox, Col, Collapse, Dropdown, Form, Row, Menu, Select, Input } from 'antd'
+import { Checkbox, Col, Collapse, Dropdown, Form, Row, Menu, Select } from 'antd'
 import React, { Component } from 'react'
-import MyForm from '../../../MyForm/MyForm'
 import Icon from '../../../Icon/Icon'
+import FormRow from '../FormRow/FormRow'
 import { DownOutlined, UpOutlined } from '@ant-design/icons'
 import heightset from './heightset.module.css'
 
@@ -16,62 +16,7 @@ const layout = {
     }
 }
 
-let tabdatalist = [
-    {
-        id: 0,
-        type: 0,
-        content: [
-            {
-                title: '边框',
-                bechecked: true,
-            }
-        ]
-    },
-    {
-        id: 1,
-        type: 1,
-        content: [
-            {
-                title: '表头',
-                bechecked: true,
-            },
-            {
-                title: '表头背景色',
-                bechecked: true
-            },
-            {
-                title: '表头字体颜色',
-                bechecked: false
-            }
-        ]
-    },
-    {
-        id: 2,
-        type: 1,
-        content: [
-            {
-                title: '数据',
-                bechecked: true
-            },
-            {
-                title: '数据奇数行背景色',
-                bechecked: true
-            },
-            {
-                title: '数据偶数行背景色',
-                bechecked: true
-            },
-            {
-                title: '数据行悬浮背景色',
-                bechecked: true
-            },
-            {
-                title: '数据字体颜色',
-
-            }
-        ]
-    }
-]
+let selectOptions = ['饮料名称','进价','售价','单位','利润','年月','品牌','数量','销售额','饮料店','总利润']
 
 let menu = (
     <Menu>
@@ -89,10 +34,70 @@ let menu = (
 
 let pxdata = ['0px', '1px', '2px', '3px', '4px', '5px', '6px'];
 
+let otherFormdata = [
+    {
+        outid: 1,
+        list: [
+            {
+                id: 3,
+                type: 0,
+                name: '表头',
+                bechecked: true
+            },
+            {
+                id: 4,
+                type: 1,
+                name: '表头背景色：'
+            },
+            {
+                id: 5,
+                type: 1,
+                name: '表头字体颜色：'
+            }
+        ]
+    },
+    {
+        outid: 2,
+        list: [
+            {
+                id: 6,
+                type: 0,
+                name: '数据',
+                bechecked: true
+            },
+            {
+                id: 7,
+                type: 1,
+                name: '数据奇数行背景色：'
+            },
+            {
+                id: 8,
+                type: 1,
+                name: '数据偶数行背景色：'
+            },
+            {
+                id: 9,
+                type: 1,
+                name: '数据行悬浮背景色：'
+            },
+            {
+                id: 10,
+                type: 1,
+                name: '数据字体颜色：'
+            },
+            {
+                id: 11,
+                type: 2,
+                name: '数据字体大小：'
+            }
+        ]
+    }
+]
+
 export default class HeightSet extends Component {
     render() {
         return (
-            <div>
+            <div className={heightset.root}>
                 <div className={heightset.property_block}>
                     <Collapse
                         className={heightset.panel_label}
@@ -104,13 +109,13 @@ export default class HeightSet extends Component {
                             <Form {...layout}>
                                 <div className={heightset.form_item}>
                                     <Row>
-                                        <Col className={heightset.form_col}>
+                                        <Col span={24} className={heightset.form_col}>
                                             <Checkbox defaultChecked>边框</Checkbox>
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col span={24} className={`${heightset.form_col} ${heightset.form_col_inline}`}>
-                                            <Icon style={{ width: '20px', height: '20px' }} icontext='zhanweifu'></Icon>
+                                        <Col span={24} className={heightset.form_col}>
+                                            <Icon style={{ width: '20px', height: '20px', color:'red'}} icontext='zhanweifu'></Icon>
                                             <Dropdown placement="bottomLeft" overlay={menu} className={heightset.line_classes}>
                                                 <div>
                                                     <span className={heightset.menu_img}>
@@ -131,9 +136,37 @@ export default class HeightSet extends Component {
                                         </Col>
                                     </Row>
                                 </div>
-                                <div className={heightset.form_item}>
-                                </div>
+                                {otherFormdata.map(item => (
+                                    <div className={heightset.form_item}>
+                                        {item.list.map(node => (
+                                            <FormRow {...node}></FormRow>
+                                        ))}
+                                    </div>
+                                ))}
                             </Form>
+                        </Panel>
+                    </Collapse>
+                    <Collapse
+                        className={heightset.panel_label}
+                        bordered={false}
+                        expandIconPosition='right'
+                        expandIcon={this.handleCollChange}
+                        defaultActiveKey='1'
+                    >
+                        <Panel header='单元格链接' key={"1"}>
+                            <div className={heightset.tab_properties}>
+                                <label title='链接字段'>链接字段：</label>
+                                <Select
+                                    className={heightset.panel_select}
+                                    allowClear
+                                    showSearch
+                                    placeholder='请选择链接字段'
+                                >
+                                    {selectOptions.map(item => (
+                                        <Option value={item}>{item}</Option>
+                                    ))}
+                                </Select>
+                            </div>
                         </Panel>
                     </Collapse>
                 </div>

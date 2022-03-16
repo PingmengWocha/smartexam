@@ -1,0 +1,97 @@
+.normal_icon_out {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.normal_icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.tabs_bottom {
+    background-color: #242526;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    font-size: 14px;
+}
+
+.tabs_bottom,
+.tabs_bottom .menu_list {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.menu_list {
+    line-height: 40px;
+    list-style: none;
+    margin: 0;
+    max-width: 96%;
+    padding-left: 0;
+}
+
+.menu_item {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    min-width: 102px;
+    padding: 0 15px;
+    position: relative;
+    user-select: none;
+}
+
+.menu_list .prepare_view {
+    color: #fff !important;
+    text-align: left;
+    width: 208px;
+}
+
+.menu_item::after {
+    content: '';
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    background-color: hsla(0, 0%, 100%, .1);
+}
+
+/* 工作台 */
+.sheet_list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px;
+    overflow-x: auto;
+    padding: 0;
+    width: calc(100% - 208px);
+}
+
+.color_content {
+    height: 26px;
+    width: 200px;
+}
+
+.color_item {
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    margin: 5px;
+    width: 14px;
+}
+
+.sheet_item {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
