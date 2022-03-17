@@ -48,6 +48,10 @@
     user-select: none;
 }
 
+.menu_item:hover {
+    background-color: hsla(0deg, 0%, 100%, .2)
+}
+
 .menu_list .prepare_view {
     color: #fff !important;
     text-align: left;
