@@ -5,9 +5,9 @@ import header from './header.module.css'
 
 export default class Header extends Component {
   render() {
-    let { showClick} = this.props;
+    let { showClick, fulled } = this.props;
     return (
-      <div>
+      <div className={`${fulled ? header.hide : ''}`}>
         <HeaderTop></HeaderTop>
         <HeaderItem showClick={showClick} />
       </div>

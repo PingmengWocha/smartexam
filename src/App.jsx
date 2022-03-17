@@ -1,24 +1,13 @@
+import React, { Component } from 'react'
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import './App.less';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header ></Header>
-//       <Main></Main>
-//       <Footer></Footer>
-//     </div>
-//   );
-// }
-
-import React, { Component } from 'react'
-
 export default class App extends Component {
   state = {
     leftShow: true,
     rightShow: true,
+    fulled: false
   }
   handleSide = (type) => {
     let tmp;
@@ -33,13 +22,19 @@ export default class App extends Component {
     }
   }
 
+  handleFull = () => {
+    let { fulled } = this.state;
+    fulled = !fulled;
+    this.setState({ fulled });
+  }
+
 
   render() {
-    let { leftShow, rightShow } = this.state;
+    let { leftShow, rightShow, fulled } = this.state;
     return (
       <div className='App'>
-        <Header showClick={this.handleSide}></Header>
-        <Main leftShow={leftShow} rightShow={rightShow}></Main>
+        <Header showClick={this.handleSide} fulled={fulled}></Header>
+        <Main leftShow={leftShow} rightShow={rightShow} fulled={fulled} onFull={this.handleFull}></Main>
         <Footer></Footer>
       </div>
     )
