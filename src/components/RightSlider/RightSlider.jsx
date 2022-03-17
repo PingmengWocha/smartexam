@@ -42,8 +42,9 @@ export default class RightSlider extends Component {
     }
     render() {
         let { currentIndex, aligns, scrollvalue } = this.state
+        let { rightShow } = this.props;
         return (
-            <div className={rightslider.slider}>
+            <div className={`${rightslider.slider} ${rightShow ? '' : rightslider.nor_hide}`}>
                 <div className={rightslider.bottom}>
                     <div className={rightslider.title} onClick={this.handleTitleClick}>
                         <div className={`${rightslider.half} ${currentIndex === '0' ? rightslider.active : ''}`} data-type='0'>基本配置</div>

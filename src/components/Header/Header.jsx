@@ -5,10 +5,11 @@ import header from './header.module.css'
 
 export default class Header extends Component {
   render() {
+    let { showClick} = this.props;
     return (
       <div>
-          <HeaderTop></HeaderTop>
-          <HeaderItem/>
+        <HeaderTop></HeaderTop>
+        <HeaderItem showClick={showClick} />
       </div>
     )
   }

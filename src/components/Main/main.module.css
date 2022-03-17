@@ -1,7 +1,29 @@
 .main_content {
     height: calc(100vh - 192px);
-    /* background: aquamarine; */
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
+.middle {
+    width: calc(100% - 416px);
+    border-radius: 4px;
+    margin: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: aqua;
+    z-index: 20px;
+}
+
+.close_all {
+    width: 100%;
+}
+
+.open_options_area {
+    width: calc(100% - 776px);
+}
+
+.close_options_mark {
+    width: calc(100% -360px);
+}
+

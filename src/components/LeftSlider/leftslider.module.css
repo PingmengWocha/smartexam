@@ -289,3 +289,7 @@
 :global(.ant-popover-inner-content) {
     padding: 0px !important;
 }
+
+.nor_hide {
+    display: none !important;
+}

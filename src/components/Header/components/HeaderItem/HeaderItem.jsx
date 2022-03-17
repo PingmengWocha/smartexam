@@ -183,12 +183,18 @@ export default class HeaderItem extends Component {
                         </div>
                     </div>
                     <div className={headeritem.option_control} onClick={this.handleSideChange}>
-                        <span className={`${headeritem.close} ${leftShow ? headeritem.active : ''}`} data-type='0'></span>
-                        <span className={`${headeritem.open} ${rightShow ? headeritem.active : ''}`} data-type='1'></span>
+                        <span className={`${headeritem.close} ${leftShow ? headeritem.active : ''}`} onClick={this.showClick(0)} data-type='0'></span>
+                        <span className={`${headeritem.open} ${rightShow ? headeritem.active : ''}`} onClick={this.showClick(1)} data-type='1'></span>
                     </div>
                 </div>
             </div>
         )
+    }
+
+    showClick = (type) => {
+        return (event) => {
+            this.props.showClick(type);
+        }
     }
 
     changeTabs = (event) => {

@@ -167,6 +167,7 @@ export default class LeftSlider extends Component {
         getFocus: false
     }
     render() {
+        let {leftShow} = this.props;
         let { getFocus } = this.state
         let prefix = (
             <span className={`${leftslider.serach_span} all_icon`}>
@@ -176,7 +177,7 @@ export default class LeftSlider extends Component {
             </span>
         )
         return (
-            <div className={leftslider.slider}>
+            <div className={`${leftslider.slider} ${leftShow ? '' : leftslider.nor_hide}`}>
                 {/* 左侧部分 */}
                 <div className={leftslider.left_content}>
                     <div className={leftslider.columns}>

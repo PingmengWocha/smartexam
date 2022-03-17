@@ -14,6 +14,10 @@
     overflow: hidden;
 }
 
+.node_hide {
+    display: none !important;
+}
+
 .tabs_bottom {
     background-color: #242526;
     bottom: 0px;
@@ -79,6 +83,23 @@
     width: calc(100% - 208px);
 }
 
+
+/* 自定义scroll */
+.sheet_list::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.sheet_list::-webkit-scrollbar-thumb {
+    background-color: #b5b5b5;
+    border-radius: 8px;
+}
+
+.sheet_list::-webkit-scrollbar-track {
+    background-color: #ececec;
+    border-radius: 8px;
+}
+
 .color_content {
     height: 26px;
     width: 200px;
@@ -98,4 +119,38 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.sheet_item.active {
+    background-color: rgb(17, 110, 222);
+}
+
+.panel_link {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    transition: all .3s ease;
+}
+
+.panel_link:hover {
+    transform: rotate(180deg);
+}
+
+
+.tabs_bottom .menu_list .menu_item span {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.create_btn {
+    border: 1px solid hsla(0, 0%, 100%, .3);
+    border-radius: 3px;
+    cursor: pointer;
+    height: 24px;
+    line-height: 23px;
+    margin-left: 20px;
+    text-align: center;
+    width: 24px;
 }
