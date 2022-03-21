@@ -3,23 +3,30 @@ import Icon from '../Icon/Icon';
 import { DownOutlined, UpOutlined } from '@ant-design/icons'
 import LeftSlider from '../LeftSlider/LeftSlider'
 import RightSlider from '../RightSlider/RightSlider'
-import main from './main.module.css'
+import EchartContent from './EchartContent/EchartContent';
 import { Table } from 'antd';
+import TabContext from './TabContext';
 
-const columns = [
-  {
-    title: '饮料名称',
-    dataIndex: 'name'
-  },
-  {
-    title: '进价',
-    dataIndex: 'purchase'
-  },
-  {
-    title: '售价',
-    dataIndex: 'sell'
-  }
-]
+import main from './main.module.css'
+
+
+// let columns = [
+//   {
+//     title: '饮料名称',
+//     dataIndex: 'name',
+//     align: 'left'
+//   },
+//   {
+//     title: '进价',
+//     dataIndex: 'purchase',
+//     align: 'left'
+//   },
+//   {
+//     title: '售价',
+//     dataIndex: 'sell',
+//     align: 'left'
+//   }
+// ]
 
 let charData = [
   {
@@ -144,10 +151,32 @@ let charData = [
   }
 ]
 
+const { Provider } = TabContext;
+// const TabContext = React.createContext({});
 export default class Main extends Component {
 
   state = {
     downShow: false,
+    columns: [
+      {
+        title: '饮料名称',
+        dataIndex: 'name'
+      },
+      {
+        title: '进价',
+        dataIndex: 'purchase'
+      },
+      {
+        title: '售价',
+        dataIndex: 'sell'
+      }
+    ],
+    tabpos: { position: ['none', 'none'] }
+  }
+
+  handleTabHeaderAlign = (column, val) => {
+    // columns = columns.map(item => item.align = val)
+    column.align = 'right'
   }
 
   handleFull = () => {
@@ -162,7 +191,7 @@ export default class Main extends Component {
 
   render() {
     let { leftShow, rightShow } = this.props;
-    let { downShow } = this.state;
+    let { downShow, columns, tabpos } = this.state;
     let { fulled } = this.props;
     return (
       <div className={`${main.main_content} ${fulled ? main.full : ''}`}>
@@ -173,8 +202,13 @@ export default class Main extends Component {
             (rightShow ? main.close_options_mark :
               main.close_all)} ${fulled ? main.close_all : ''}`}>
           <div className={main.chart_content}>
-            <div>
-              内容
+            <div className={main.display_chart}>
+              {/* <Spin spinning={false}>
+                <EchartContent columns={columns} charData={charData} />
+              </Spin> */}
+              <Provider value={{ columns, tabpos}}>
+                <EchartContent charData={charData} />
+              </Provider>
             </div>
           </div>
           <div className={`${main.condition_data_preview}  ${downShow ? '' : main.hide} ${fulled ? main.nor_hide : ''}`}>
@@ -224,7 +258,9 @@ export default class Main extends Component {
             </span>
           </div>
         </div>
-        <RightSlider rightShow={rightShow} fulled={fulled} />
+        <Provider value={{columns, tabpos}}>
+          <RightSlider rightShow={rightShow} fulled={fulled} />
+        </Provider>
       </div>
     )
   }

@@ -104,3 +104,16 @@
     height: 100vh;
     top: 0;
 }
+
+.chart_content {
+    background: #fff;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+
+.display_chart {
+    height: calc(100% - 25px);
+    overflow: auto;
+    padding: 20px 0;
+}
