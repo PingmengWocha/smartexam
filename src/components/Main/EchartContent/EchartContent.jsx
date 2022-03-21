@@ -1,10 +1,17 @@
 import { Table } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
 import TabContext from '../TabContext';
+// import { css, jsx } from '@emotion/react';
+import styled from '@emotion/styled'
 
 import './echartcontent.css'
 
 const { Consumer } = TabContext;
+const CanChangeDiv = styled.div`
+    .ant-table-thead > tr > th {
+        text-align: right;
+    }
+`;
 export default function EchartContent(props) {
     // let [tabpos] = useState({ position: ['none', 'none'] });
     // const tableRef = useRef();
@@ -20,7 +27,7 @@ export default function EchartContent(props) {
                         <div style={{ marginTop: '47px', height: 'calc(100% - 47px)' }}>
                             <div className='chart_container'>
                                 <div className='custom-table'>
-                                    <div className='css-normal'>
+                                    <CanChangeDiv className='css-normal'>
                                         <Table
                                             pagination={{ ...value.tabpos }}
                                             columns={value.columns}
@@ -28,14 +35,17 @@ export default function EchartContent(props) {
                                             bordered
                                             size='small'
                                             onHeaderRow={(columns, index) => {
-                                                console.log(columns,index)
+                                                console.log(columns, index)
                                             }}
                                             onRow={record => {
                                                 console.log(record);
                                             }}
                                             scroll={{ y: 200 }}>
                                         </Table>
-                                    </div>
+                                    </CanChangeDiv>
+                                    {/* <div className={`css-normal ${tabStyle}`}>
+                                        
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

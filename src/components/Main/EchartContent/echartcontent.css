@@ -29,8 +29,8 @@
     border-radius: 8px;
 }
 
-.css-normal .ant-table-small .ant-table-thead > tr > th {
+.css-normal .ant-table-small .ant-table-thead>tr>th {
     /* background-color: rgb(69, 114, 195);
     color: rgb(255, 255, 255); */
-    text-align: left;
+    /* text-align: left; */
 }
