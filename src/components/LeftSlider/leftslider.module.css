@@ -1,17 +1,3 @@
-.normal_icon {
-    margin-right: 10px;
-}
-.icons {
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-.serach_span {
-    color: #dedfe0;
-}
-
 /* 整体 */
 .slider {
     width: 416px;
@@ -72,9 +58,6 @@
     padding-left: 35%;
 }
 
-/* .asset_search_focus .my_search {
-    padding-left: 0px;
-} */
 
 .columns_content {
     max-height: calc(100% - 120px);
@@ -116,15 +99,6 @@
     border-radius: 2px;
 }
 
-.order_type {
-    margin-right: 10px;
-    font-size: 16px;
-    position: relative;
-    top: 2px;
-    vertical-align: 0px;
-    color: #738dc0;
-}
-
 .column_row:hover .order_type {
     color: #0454f2;
 }
@@ -152,11 +126,6 @@
     color: #abaeb3;
 }
 
-.lost_icon {
-    margin-left: 10px;
-    /* text-align: right;
-    display: inline-block; */
-}
 
 .lost_icon_none {
     display: none;
@@ -286,9 +255,9 @@
 }
 
 /* 除去气泡框默认padding */
-:global(.ant-popover-inner-content) {
+/* :global(.ant-popover-inner-content) {
     padding: 0px !important;
-}
+} */
 
 .nor_hide {
     display: none !important;

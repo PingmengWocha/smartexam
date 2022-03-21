@@ -1,6 +1,6 @@
-// import { PageHeader, Avatar } from 'antd'
 import { Button, Input } from 'antd'
 import React, { Component } from 'react'
+import Icon from '../../../Icon/Icon';
 import headertop from './headertop.module.css'
 
 export default class HeaderTop extends Component {
@@ -16,16 +16,8 @@ export default class HeaderTop extends Component {
     return (
       <div className={headertop.site_page_header}>
         <div className={headertop.page_header_left}>
-          <span className={headertop.back}>
-            <svg className={headertop.iconback} aria-hidden='true'>
-              <use xlinkHref='#icon-back_android'></use>
-            </svg>
-          </span>
-          <span className={headertop.datacheck}>
-            <svg className={headertop.shujufenxiyi}>
-              <use xlinkHref='#icon-shujufenxiyi'></use>
-            </svg>
-          </span>
+          <Icon icontext='back_android' iconstyle={{ width: '24px', height: '24px', fontSize: '24px', marginLeft: '9px', marginRight: '24px' }}></Icon>
+          <Icon icontext='shujufenxiyi' iconstyle={{ width: '44px', height: '44px', fontSize: '44px' }}></Icon>
           <span className={headertop.title}>数据分析仪</span>
         </div>
         <div className={headertop.page_header_main}>
@@ -34,9 +26,7 @@ export default class HeaderTop extends Component {
               饮料进价和售价对比
             </span>
             <span className={headertop.writeicon}>
-              <svg className={headertop.iconwrite} aria-hidden='true'>
-                <use xlinkHref='#icon-tubiaoshangchuanmoban'></use>
-              </svg>
+              <Icon icontext='tubiaoshangchuanmoban'></Icon>
             </span>
             <Input
               className={headertop.showinput}
@@ -49,15 +39,11 @@ export default class HeaderTop extends Component {
         </div>
         <div className={headertop.page_header_right}>
           <Button type="link" className={headertop.btn}>
-            <svg className={headertop.iconshare} aria-hidden='true'>
-              <use xlinkHref='#icon-fenxiang'></use>
-            </svg>
+            <Icon icontext='fenxiang'></Icon>
             分享
           </Button>
           <Button type="link" className={headertop.btn}>
-            <svg className={headertop.iconallshare} aria-hidden='true'>
-              <use xlinkHref='#icon-zhifeiji'></use>
-            </svg>
+            <Icon icontext='zhifeiji'></Icon>
             共享
           </Button>
           <Button type="primary" className={`${headertop.savebtn} ${headertop.btn}`}>保存</Button>
@@ -66,12 +52,13 @@ export default class HeaderTop extends Component {
     )
   }
   componentDidUpdate() {
+    // 自动获取input框焦点
     this.inputRef.current.focus();
   }
-  
+
   hideInput = () => {
-    let {isShow} = this.state;
-    this.setState({isShow: !isShow})
+    let { isShow } = this.state;
+    this.setState({ isShow: !isShow })
   }
 
   changeNode = () => {

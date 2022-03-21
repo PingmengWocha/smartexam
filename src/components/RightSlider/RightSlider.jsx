@@ -4,6 +4,7 @@ import HeightSet from './components/HeightSet/HeightSet'
 import React, { Component } from 'react'
 
 import rightslider from './rightslider.module.css'
+import Icon from '../Icon/Icon'
 
 const { Option } = Select;
 const { Panel } = Collapse;
@@ -99,24 +100,18 @@ export default class RightSlider extends Component {
                                                         <span>对齐方式</span>
                                                         <div onClick={this.handleAlClick}>
                                                             <button data-type='0' className={`${rightslider.ql_align} ${aligns === '0' ? rightslider.ql_active : ''}`}>
-                                                                <span className={rightslider.all_icon}>
-                                                                    <svg data-type='0' className={rightslider.iconarea} aria-hidden="true">
-                                                                        <use xlinkHref="#icon-zhanweifu"></use>
-                                                                    </svg>
+                                                                <span>
+                                                                    <Icon iconstyle={{ fontSize: '18px' }} icontext='zhanweifu'></Icon>
                                                                 </span>
                                                             </button>
                                                             <button data-type='1' className={`${rightslider.ql_align} ${aligns === '1' ? rightslider.ql_active : ''}`}>
-                                                                <span className={rightslider.all_icon}>
-                                                                    <svg data-type='1' className={rightslider.iconarea} aria-hidden="true">
-                                                                        <use xlinkHref="#icon-zhanweifu"></use>
-                                                                    </svg>
+                                                                <span data-type='1'>
+                                                                    <Icon iconstyle={{ fontSize: '18px' }} icontext='zhanweifu'></Icon>
                                                                 </span>
                                                             </button>
                                                             <button data-type='2' className={`${rightslider.ql_align} ${aligns === '2' ? rightslider.ql_active : ''}`}>
-                                                                <span className={rightslider.all_icon}>
-                                                                    <svg data-type='2' className={rightslider.iconarea} aria-hidden="true">
-                                                                        <use xlinkHref="#icon-zhanweifu"></use>
-                                                                    </svg>
+                                                                <span data-type='1'>
+                                                                    <Icon iconstyle={{ fontSize: '18px' }} icontext='zhanweifu'></Icon>
                                                                 </span>
                                                             </button>
                                                         </div>
@@ -151,24 +146,18 @@ export default class RightSlider extends Component {
                                                         <span>对齐方式</span>
                                                         <div onClick={this.handleAlClick}>
                                                             <button data-type='0' className={`${rightslider.ql_align} ${aligns === '0' ? rightslider.ql_active : ''}`}>
-                                                                <span className={rightslider.all_icon}>
-                                                                    <svg data-type='0' className={rightslider.iconarea} aria-hidden="true">
-                                                                        <use xlinkHref="#icon-zhanweifu"></use>
-                                                                    </svg>
+                                                                <span data-type='0'>
+                                                                    <Icon iconstyle={{ fontSize: '18px' }} icontext='zhanweifu'></Icon>
                                                                 </span>
                                                             </button>
                                                             <button data-type='1' className={`${rightslider.ql_align} ${aligns === '1' ? rightslider.ql_active : ''}`}>
-                                                                <span className={rightslider.all_icon}>
-                                                                    <svg data-type='1' className={rightslider.iconarea} aria-hidden="true">
-                                                                        <use xlinkHref="#icon-zhanweifu"></use>
-                                                                    </svg>
+                                                                <span data-type='1'>
+                                                                    <Icon iconstyle={{ fontSize: '18px' }} icontext='zhanweifu'></Icon>
                                                                 </span>
                                                             </button>
                                                             <button data-type='2' className={`${rightslider.ql_align} ${aligns === '2' ? rightslider.ql_active : ''}`}>
-                                                                <span className={rightslider.all_icon}>
-                                                                    <svg data-type='2' className={rightslider.iconarea} aria-hidden="true">
-                                                                        <use xlinkHref="#icon-zhanweifu"></use>
-                                                                    </svg>
+                                                                <span data-type='2'>
+                                                                    <Icon iconstyle={{ fontSize: '18px' }} icontext='zhanweifu'></Icon>
                                                                 </span>
                                                             </button>
                                                         </div>
@@ -265,11 +254,7 @@ export default class RightSlider extends Component {
                                             <div style={{ width: '100%' }}>
                                                 <div>
                                                     <Button className={rightslider.rule_btn}>
-                                                        <span className={`${rightslider.normal_icon} all_icon`}>
-                                                            <svg className={rightslider.icons} aria-hidden="true">
-                                                                <use xlinkHref="#icon-jiahao1"></use>
-                                                            </svg>
-                                                        </span>
+                                                        <Icon icontext='jiahao1'></Icon>
                                                         <span>添加规则</span>
                                                     </Button>
                                                 </div>

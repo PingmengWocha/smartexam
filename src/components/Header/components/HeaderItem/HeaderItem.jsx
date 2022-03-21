@@ -1,5 +1,6 @@
 import { Dropdown, Menu, Popover } from 'antd';
 import React, { Component } from 'react';
+import Icon from '../../../Icon/Icon';
 import headeritem from './headeritem.module.css'
 
 
@@ -115,9 +116,7 @@ export default class HeaderItem extends Component {
                     <Dropdown className={headeritem.deopdown_outer} overlay={menu} trigger={['click']}>
                         <span className={headeritem.dropdown}>
                             文件
-                            <svg className={headeritem.dropdownicon} aria-hidden="true">
-                                <use xlinkHref='#icon-xiala-xia'></use>
-                            </svg>
+                            <Icon icontext='xiala-xia'></Icon>
                         </span>
                     </Dropdown>
                     {/* 右侧tab选择栏 */}
@@ -139,11 +138,7 @@ export default class HeaderItem extends Component {
                             {
                                 TABSContent[currentTab - 2].leftdata.map(item =>
                                     <div className={headeritem.settings} key={item.id}>
-                                        <span className={`${headeritem.settingicon} all_icon`}>
-                                            <svg className={headeritem.iconarea}>
-                                                <use xlinkHref='#icon-zhanweifu'></use>
-                                            </svg>
-                                        </span>
+                                        <Icon icontext='zhanweifu' iconstyle={{ width: '16px', height: '16px', marginRight: '6px', fontSize: '16px' }}></Icon>
                                         <div>{item.title}</div>
                                     </div>
                                 )
@@ -158,11 +153,7 @@ export default class HeaderItem extends Component {
                                 {
                                     TABSContent[currentTab - 2].rightdata.map(item =>
                                         <div className={headeritem.op_item} key={item.id}>
-                                            <span className={`${headeritem.othericon} all_icon`}>
-                                                <svg className={headeritem.iconarea}>
-                                                    <use xlinkHref='#icon-zhanweifu'></use>
-                                                </svg>
-                                            </span>
+                                            <Icon icontext='zhanweifu' iconstyle={{ width: '24px', height: '24px', marginRight: '6px', fontSize: '24px' }}></Icon>
                                             <Popover
                                                 content='你好'
                                                 title='测试'
@@ -171,9 +162,7 @@ export default class HeaderItem extends Component {
                                             >
                                                 <span>
                                                     <span>{item.title}</span>
-                                                    <svg className={headeritem.dropdownicon} aria-hidden="true">
-                                                        <use xlinkHref='#icon-xiala-xia'></use>
-                                                    </svg>
+                                                    <Icon icontext='xiala-xia'></Icon>
                                                 </span>
                                             </Popover>
                                         </div>

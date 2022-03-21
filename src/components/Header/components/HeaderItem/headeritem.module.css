@@ -8,23 +8,6 @@
     vertical-align: -0.125em;
 }
 
-/* 文件下拉框的icon */
-.dropdownicon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-/* 占位icon */
-.iconarea {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
 
 .page_top {
     display: flex;
@@ -140,10 +123,6 @@
     font-size: 16px;
 }
 
-.othericon {
-    margin-right: 6px;
-    font-size: 24px;
-}
 
 .select_chart_type {
     display: flex;

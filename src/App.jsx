@@ -13,12 +13,10 @@ export default class App extends Component {
     let tmp;
     if (type === 0) {
       tmp = this.state.leftShow;
-      tmp = !tmp;
-      this.setState({ leftShow: tmp });
+      this.setState({ leftShow: !tmp });
     } else if (type === 1) {
       tmp = this.state.rightShow;
-      tmp = !tmp;
-      this.setState({ rightShow: tmp });
+      this.setState({ rightShow: !tmp });
     }
   }
 

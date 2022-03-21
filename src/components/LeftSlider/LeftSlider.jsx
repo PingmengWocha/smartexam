@@ -1,5 +1,6 @@
 import { Dropdown, Input, Menu, Popover } from 'antd'
 import React, { Component } from 'react'
+import Icon from '../Icon/Icon'
 
 import leftslider from './leftslider.module.css'
 
@@ -102,63 +103,47 @@ const translateItem = (
 const menu = (
     <Menu>
         <Menu.Item key={0} className={leftslider.firstitem}>
-            <div className={leftslider.secondpop_out}>
-                <span>排序</span>
-                <Popover
-                    placement="rightTop"
-                    content={sortItem}
-                    style={{ padding: 0 }}
-                >
-                    <span className={leftslider.right_icon}>
-                        <svg className={leftslider.icons} aria-hidden="true">
-                            <use xlinkHref="#icon-youjiantou"></use>
-                        </svg>
-                    </span>
-                </Popover>
-            </div>
+            <Popover
+                placement="rightTop"
+                content={sortItem}
+                style={{ padding: 0 }}
+            >
+                <div className={leftslider.secondpop_out}>
+                    <span>排序</span>
+                    <Icon icontext='youjiantou' iconstyle={{ width: '10px', height: ' 10px', fontSize: '10px', color: '#898f96' }}></Icon>
+                </div>
+            </Popover>
+
         </Menu.Item>
         <Menu.Item key={1} className={leftslider.firstitem}>
-            <div className={leftslider.secondpop_out}>
-                <span>统计</span>
-                <Popover
-                    placement="rightTop"
-                    content={countItem}
-                    style={{ padding: 0 }}
-                >
-                    <span className={leftslider.right_icon}>
-                        <svg className={leftslider.icons} aria-hidden="true">
-                            <use xlinkHref="#icon-youjiantou"></use>
-                        </svg>
-                    </span>
-                </Popover>
-            </div>
+            <Popover
+                placement="rightTop"
+                content={countItem}
+                style={{ padding: 0 }}
+            >
+                <div className={leftslider.secondpop_out}>
+                    <span>统计</span>
+                    <Icon icontext='youjiantou' iconstyle={{ width: '10px', height: ' 10px', fontSize: '10px', color: '#898f96' }}></Icon>
+                </div>
+            </Popover>
         </Menu.Item>
         <Menu.Item key={2} className={leftslider.firstitem}>
             <span>过滤</span>
         </Menu.Item>
         <Menu.Item key={3} className={leftslider.firstitem}>
-            <div className={leftslider.secondpop_out}>
-                <span>翻译</span>
-                <Popover
-                    placement="rightTop"
-                    content={translateItem}
-                    style={{ padding: 0 }}
-                >
-                    <span className={leftslider.right_icon}>
-                        <svg className={leftslider.icons} aria-hidden="true">
-                            <use xlinkHref="#icon-youjiantou"></use>
-                        </svg>
-                    </span>
-                </Popover>
-            </div>
+            <Popover
+                placement="rightTop"
+                content={translateItem}
+                style={{ padding: 0 }}
+            >
+                <div className={leftslider.secondpop_out}>
+                    <span>翻译</span>
+                    <Icon icontext='youjiantou' iconstyle={{ width: '10px', height: ' 10px', fontSize: '10px', color: '#898f96' }}></Icon>
+                </div>
+            </Popover>
         </Menu.Item>
         <Menu.Item key={4} className={leftslider.firstitem}>
-            <Popover
-                trigger="hover"
-                placement="rightTop"
-            >
-                <span>别名</span>
-            </Popover>
+            <span>别名</span>
         </Menu.Item>
     </Menu>
 )
@@ -170,11 +155,7 @@ export default class LeftSlider extends Component {
         let { leftShow, fulled } = this.props;
         let { getFocus } = this.state
         let prefix = (
-            <span className={`${leftslider.serach_span} all_icon`}>
-                <svg className={leftslider.icons} aria-hidden="true">
-                    <use xlinkHref="#icon-sousuo"></use>
-                </svg>
-            </span>
+            <Icon icontext='sousuo' iconstyle={{ width: '14px', height: '14px', color: '#dedfe0' }}></Icon>
         )
         return (
             <div className={`${leftslider.slider} ${leftShow ? '' : leftslider.nor_hide} ${fulled ? leftslider.nor_hide : ''}`}>
@@ -182,11 +163,7 @@ export default class LeftSlider extends Component {
                 <div className={leftslider.left_content}>
                     <div className={leftslider.columns}>
                         <h3 className={leftslider.asset_name}>
-                            <span className='all_icon' style={{ marginRight: "10px" }}>
-                                <svg className={leftslider.icons} aria-hidden="true">
-                                    <use xlinkHref='#icon-odbc'></use>
-                                </svg>
-                            </span>
+                            <Icon icontext='odbc' iconstyle={{ width: '14px', height: '14px', marginRight: '10px' }}></Icon>
                             <span className={leftslider.asset_dataset}>销量处理数据</span>
                         </h3>
                         <div className={leftslider.header}>
@@ -211,23 +188,26 @@ export default class LeftSlider extends Component {
                                             <Dropdown overlay={menu} trigger={['click']}>
                                                 <div className={leftslider.column_row}>
                                                     <div style={{ display: 'flex' }}>
-                                                        <span className={`${leftslider.order_type} all_icon`}>
-                                                            <svg className={leftslider.icons} aria-hidden="true">
-                                                                <use xlinkHref="#icon-text"></use>
-                                                            </svg>
+                                                        <span className={leftslider.order_type}>
+                                                            <Icon icontext='text'
+                                                                iconstyle={{
+                                                                    marginRight: '10px',
+                                                                    fontSize: '16px',
+                                                                    position: 'relative',
+                                                                    top: '2px',
+                                                                    verticalAlign: '0px',
+                                                                    color: '#738dc0'
+                                                                }} />
                                                         </span>
                                                         <span className={leftslider.column_name}>{item.title}</span>
                                                     </div>
                                                     <div className={`${leftslider.row_icon}`}>
                                                         <Popover
-                                                            content={<span style={{ color: 'red' }}>从图标中删除</span>}
+                                                            content={<span style={{ color: 'red' }}>从图库中删除</span>}
                                                             trigger='hover'
-                                                            placement="bottomLeft"
-                                                        >
-                                                            <span className={`${leftslider.lost_icon} ${item.selected ? '' : leftslider.lost_icon_none}`}>
-                                                                <svg className={leftslider.icons} aria-hidden="true">
-                                                                    <use xlinkHref="#icon-zhuzhuangtu"></use>
-                                                                </svg>
+                                                            placement="bottomLeft">
+                                                            <span className={`${item.selected ? '' : leftslider.lost_icon_none}`}>
+                                                                <Icon icontext='zhuzhuangtu' iconstyle={{ marginLeft: '10px' }}></Icon>
                                                             </span>
                                                         </Popover>
                                                     </div>
@@ -238,16 +218,11 @@ export default class LeftSlider extends Component {
                                     )
                                 }
                             </div>
-                            <div className={leftslider.asset_column_rows}></div>
                         </div>
                     </div>
                     <div className={leftslider.addcolumns}>
                         <div className={leftslider.addbtn}>
-                            <span className={`all_icon ${leftslider.normal_icon}`}>
-                                <svg className={leftslider.icons} aria-hidden="true">
-                                    <use xlinkHref="#icon-jiahao1"></use>
-                                </svg>
-                            </span>
+                            <Icon icontext='jiahao1' iconstyle={{ width: '14px', height: '14px', marginRight: '10px' }}></Icon>
                             添加字段
                         </div>
                     </div>
@@ -259,21 +234,13 @@ export default class LeftSlider extends Component {
                         <div className={leftslider.point_col}>
                             <div className={leftslider.point_area}>
                                 <p className={leftslider.right_way}>
-                                    <span className={`all_icon ${leftslider.normal_icon} ${leftslider.point_icon}`}>
-                                        <svg className={leftslider.icons} aria-hidden="true">
-                                            <use xlinkHref="#icon-yanse"></use>
-                                        </svg>
-                                    </span>
+                                    <Icon icontext='yanse' iconstyle={{ fontSize: '16px', marginRight: '5px', verticalAlign: 'middle' }}></Icon>
                                     <span>颜色</span>
                                 </p>
                             </div>
                             <div className={leftslider.point_area}>
                                 <p className={leftslider.left_way}>
-                                    <span className={`all_icon ${leftslider.normal_icon} ${leftslider.point_icon}`}>
-                                        <svg className={leftslider.icons} aria-hidden="true">
-                                            <use xlinkHref="#icon-daxiao"></use>
-                                        </svg>
-                                    </span>
+                                    <Icon icontext='daxiao' iconstyle={{ fontSize: '16px', marginRight: '5px', verticalAlign: 'middle' }}></Icon>
                                     <span>大小</span>
                                 </p>
                             </div>
@@ -281,11 +248,7 @@ export default class LeftSlider extends Component {
                         <div className={leftslider.point_col}>
                             <div className={leftslider.point_area}>
                                 <p>
-                                    <span className={`all_icon ${leftslider.normal_icon} ${leftslider.point_icon}`}>
-                                        <svg className={leftslider.icons} aria-hidden="true">
-                                            <use xlinkHref="#icon-biaoqian"></use>
-                                        </svg>
-                                    </span>
+                                    <Icon icontext='biaoqian' iconstyle={{ fontSize: '16px', marginRight: '5px', verticalAlign: 'middle' }}></Icon>
                                     <span>标签</span>
                                 </p>
                             </div>
