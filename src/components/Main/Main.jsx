@@ -10,23 +10,20 @@ import TabContext from './TabContext';
 import main from './main.module.css'
 
 
-// let columns = [
-//   {
-//     title: '饮料名称',
-//     dataIndex: 'name',
-//     align: 'left'
-//   },
-//   {
-//     title: '进价',
-//     dataIndex: 'purchase',
-//     align: 'left'
-//   },
-//   {
-//     title: '售价',
-//     dataIndex: 'sell',
-//     align: 'left'
-//   }
-// ]
+let columns = [
+  {
+    title: '饮料名称',
+    dataIndex: 'name'
+  },
+  {
+    title: '进价',
+    dataIndex: 'purchase'
+  },
+  {
+    title: '售价',
+    dataIndex: 'sell'
+  }
+]
 
 let charData = [
   {
@@ -157,26 +154,21 @@ export default class Main extends Component {
 
   state = {
     downShow: false,
-    columns: [
-      {
-        title: '饮料名称',
-        dataIndex: 'name'
-      },
-      {
-        title: '进价',
-        dataIndex: 'purchase'
-      },
-      {
-        title: '售价',
-        dataIndex: 'sell'
-      }
-    ],
+    tabHeader: {
+      textAlign: 'left',
+      bgColor: 'hsl(219deg 51% 52%)',
+      color: 'white'
+    },
+    tabBody: {
+      textAlign: 'left',
+      bgColor: 'hsl(219deg 51% 52%)',
+      color: 'white'
+    },
     tabpos: { position: ['none', 'none'] }
   }
 
   handleTabHeaderAlign = (column, val) => {
     // columns = columns.map(item => item.align = val)
-    column.align = 'right'
   }
 
   handleFull = () => {
@@ -191,7 +183,7 @@ export default class Main extends Component {
 
   render() {
     let { leftShow, rightShow } = this.props;
-    let { downShow, columns, tabpos } = this.state;
+    let { downShow, tabpos, tabHeader, tabBody } = this.state;
     let { fulled } = this.props;
     return (
       <div className={`${main.main_content} ${fulled ? main.full : ''}`}>
@@ -206,7 +198,7 @@ export default class Main extends Component {
               {/* <Spin spinning={false}>
                 <EchartContent columns={columns} charData={charData} />
               </Spin> */}
-              <Provider value={{ columns, tabpos}}>
+              <Provider value={{ columns, tabpos, tabHeader, tabBody }}>
                 <EchartContent charData={charData} />
               </Provider>
             </div>
@@ -258,7 +250,7 @@ export default class Main extends Component {
             </span>
           </div>
         </div>
-        <Provider value={{columns, tabpos}}>
+        <Provider value={{ columns, tabpos }}>
           <RightSlider rightShow={rightShow} fulled={fulled} />
         </Provider>
       </div>
